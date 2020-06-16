@@ -5,7 +5,6 @@ import requests
 
 from python_wikipedia_commandline import console
 
-
 @pytest.fixture
 def runner():
     return click.testing.CliRunner()
@@ -48,3 +47,8 @@ def test_main_fails_on_request_error(runner, mock_requests_get):
     mock_requests_get.side_effect = Exception("Boom")
     result = runner.invoke(console.main)
     assert result.exit_code == 1
+
+@pytest.mark.e2e
+def test_main_succeeds_in_production_env(runner):
+    result = runner.invoke(console.main)
+    assert result.exit_code == 0
