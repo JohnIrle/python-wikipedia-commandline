@@ -8,8 +8,13 @@ homepage = "https://github.com/JohnIrle/python-wikipedia-commandline"
 repository = "https://github.com/JohnIrle/python-wikipedia-commandline"
 authors = ["JohnIrle <irlejohn@gmail.com>"]
 
+[tool.poetry.scripts]
+commandline-wikipedia = "python_wikipedia_commandline.console:main"
+
 [tool.poetry.dependencies]
 python = "^3.7"
+click = "^7.1.2"
+requests = "^2.23.0"
 
 [tool.poetry.dev-dependencies]
 
