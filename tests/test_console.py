@@ -1,6 +1,5 @@
 import click.testing
 import pytest
-
 import requests
 
 from python_wikipedia_commandline import console
