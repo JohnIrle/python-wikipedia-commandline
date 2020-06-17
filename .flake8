@@ -1,3 +1,6 @@
 [flake8]
-select = C,E,F,W
+application-import-names = python_wikipedia_commandline, tests
+import-order-style = google
+select = BLK,C,E,F,I,W
+ignore = E203,W503
 max-complexity = 10
